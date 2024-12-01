@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- font font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Font link -->
+    <link rel="stylesheet" href="https://d1y3pl71tvoccx.cloudfront.net/1.0.0/AmazonEmber-Rg.css" type="text/css">
+    <!-- CSS FILE -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pannel.css">
+</head>
+
+<body id="body">
+
+    <div id="overlay"></div>
+
+    <header id="header">
+
+        <div class="logo">
+            <img src="images/amazon-dark-logo-png-transparent.png" alt="">
+        </div>
+
+        <div class="address">
+            <ion-icon name="location-outline" class="address-icon"></ion-icon>
+            <div class="add-content">
+                <p>Delivering to Ahmedabad 382480</p>
+                <span>Updat location</span>
+            </div>
+        </div>
+
+        <div class="search-bar-container" id="search-bar-container">
+
+            <button name="" id="select">
+                <p>All<ion-icon name="caret-down-sharp"></ion-icon></p>
+            </button>
+            <input type="search" id="search" autocomplete="off" placeholder="Search Amazon.in" onfocus="outline()"
+                onblur="hide()">
+            <button class="search-icon" onclick="srch()">
+                <i class="fa fa-search"></i>
+            </button>
+
+        </div>
+
+        <div class="flage">
+            <img src="images/india.png" alt="">
+            <select name="" id="">
+                <option value="IN">IN</option>
+            </select>
+        </div>
+
+        <div class="login-bar">
+            <div class="add-content">
+                <p>Hello, sign in </p>
+                <select name="" id="">
+                    <option value="">Account & Lists</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="return-bar">
+            <div class="add-content">
+                <p>Returns </p>
+                <span> & Orders </span>
+            </div>
+        </div>
+
+        <div class="cart-bar">
+            <!-- <ion-icon name="cart-outline"></ion-icon> -->
+            <span></span>
+            <div class="span"> 0 </div>
+            <p>Cart</p>
+        </div>
+
+    </header>
+
+
+
+    <main id="main">
+
+
+        <!--============================================== PANNEL START  ==============================================-->
+
+        <div class="nav-bar" id="nav-bar">
+
+            <div class="nav-bar-container">
+
+                <div class="heading">
+                    <a href="#"><i class="fa-solid fa-circle-user"></i>Hello, sign in</a>
+                </div>
+
+                <!---------------------------- INNER CONTENT OF NAV-BAR START ---------------------------->
+
+                <div class="inner-nav-content" id="inner-nav-content">
+
+                    <nav class="mainmanubtn">
+                        <li id="Main-Manu"><i class="fa-solid fa-arrow-left"></i>Main Manu</li>
+                    </nav>
+
+                    <!---------------------------- ECO AND ALEXA SECTION START ---------------------------->
+
+                    <div class="content" id="eco">
+                        <ul>
+                            <h2>Trending</h2>
+                            <li>Best Sellers</li>
+                            <li>New Releases</li>
+                            <li>Movers and Shakers</li>
+                            <li class="hr"></li>
+                        </ul>
+                    </div>
+
+                    <!---------------------------- ECO AND ALEX SECTION START ---------------------------->
+
+                    <!---------------------------- ECO AND ALEX SECTION START ---------------------------->
+                    <div class="content" id="fire">
+                        <ul>
+                            <h2>Digital Content And Devices</h2>
+                            <li>Eco & Alexa </li>
+                            <li>Fite TV</li>
+                            <li>Kindle E-Readers & eBooks</li>
+                            <li>Audible Audiobookd</li>
+                            <li>Amazon Prime Video</li>
+                            <li>Amazon Prime Music</li>
+                            <li class="hr"></li>
+                        </ul>
+                    </div>
+                    <!---------------------------- ECO AND ALEX SECTION START ---------------------------->
+
+                </div>
+
+                <!---------------------------- INNER CONTENT OF NAV-BAR OVER ---------------------------->
+
+                <div class="content" id="nav-content">
+                    <ul>
+                        <h2>Trending</h2>
+                        <li>Best Sellers</li>
+                        <li>New Releases</li>
+                        <li>Movers and Shakers</li>
+                        <li class="hr"></li>
+
+                        <h2>Digital Content And Devices</h2>
+                        <a id="echo&alexa" value="echo&alexa" data-value="echo&alexa">
+                            <li>Eco & Alexa<i class="fa-solid fa-angle-right"></i></li>
+                        </a>
+                        <a id="FireTV" value="FireTV" data-value="FireTV">
+                            <li>Fire TV <i class="fa-solid fa-angle-right"></i></li>
+                        </a>
+                        <li>Kindle E-Readers & eBooks</li>
+                        <li>Audible Audiobookd</li>
+                        <li>Amazon Prime Video</li>
+                        <li>Amazon Prime Music</li>
+                        <li class="hr"></li>
+
+                        <h2>Digital Content And Devices</h2>
+                        <li>Eco & Alexa </li>
+                        <li>Fite TV</li>
+                        <li>Kindle E-Readers & eBooks</li>
+                        <li>Audible Audiobookd</li>
+                        <li>Amazon Prime Video</li>
+                        <li>Amazon Prime Music</li>
+                        <li class="hr"></li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <button class="fa-solid fa-xmark" id="hide-nav"></button>
+
+        </div>
+
+
+        <div class="pannel">
+
+            <div class="list">
+                <ul>
+                    <li id="all"><i class="bars fa-solid fa-bars" id="bars"></i>All</li>
+                    <li>Fresh</li>
+                    <li>Amazon miniTV</li>
+                    <li>Sell</li>
+                    <li>Best Sellers</li>
+                    <li>Today's Deals</li>
+                    <li>Mobiles</li>
+                    <li>Electronics</li>
+                    <li>Prime</li>
+                    <li>Gift Ideas</li>
+                    <li>Customer Service</li>
+                </ul>
+            </div>
+
+            <div class="sale">
+                <img src="images/Republic Day Sale.jpg" alt="">
+            </div>
+
+        </div>
+
+
+        <!--============================================== PANNEL OVER  ==============================================-->
+
+
+        <!-- BACKGROUND IMG -->
+
+        <div class="img"></div>
+
+        <!--============================================== ARTICAL ONE START  ==============================================-->
+
+        <div class="manage"></div>
+
+        <article id="artical1">
+
+
+            <!--================================= SECTION ONE START =================================-->
+
+            <section class="section1" id="section1">
+
+                <div class="container">
+
+                    <!-- box 1 -->
+
+                    <div class="main-box">
+                        <div class="heading">
+                            <h2>Deals on smartphones that suits your budget</h2>
+                        </div>
+                        <div class="content">
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/1.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Budget | Under ₹10,000</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/2.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Mid range | ₹10,000 - ₹25,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/3.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Premium | ₹25,000 - ₹40,000</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/4.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Ultra Premium | Above ₹40,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <a href="#">See all offers</a>
+                        </div>
+                    </div>
+
+                    <!-- box 2 -->
+
+                    <div class="main-box">
+                        <div class="heading">
+                            <h2>Up to 65% off | Deals on wide range of TVs</h2>
+                        </div>
+                        <div class="content">
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/5.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Budget | Under ₹10,000</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/6.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Mid range | ₹10,000 - ₹25,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/7.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Premium | ₹25,000 - ₹40,000</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/8.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Ultra Premium | Above ₹40,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <a href="#">See all offers</a>
+                        </div>
+                    </div>
+
+                    <!-- box 3 -->
+
+                    <div class="main-box">
+                        <div class="heading">
+                            <h2>Starting ₹79 | Home decor and furnishings</h2>
+                        </div>
+                        <div class="content">
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/9.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Budget | Under ₹10,000</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/10.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Mid range | ₹10,000 - ₹25,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/11.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Premium | ₹25,000 - ₹40,000</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/12.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Ultra Premium | Above ₹40,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <a href="#">See all offers</a>
+                        </div>
+                    </div>
+
+                    <!-- box 4 -->
+
+                    <div class="add-box">
+                        <div class="text-content">
+                            <div class="heading">
+                                <h2>Sign in for your best experience</h2>
+                            </div>
+                            <button>Sign in securely</button>
+                        </div>
+                        <div class="add-image">
+                            <img src="images/main/ad.jpg" alt="">
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+            <!--================================= SECTION ONE OVER =================================-->
+
+
+
+            <!--================================= SECTION TWO START =================================-->
+
+            <section class="section2 section1" id="section2">
+
+                <div class="container">
+
+                    <!-- box 1 -->
+
+                    <div class="main-box">
+                        <div class="heading">
+                            <h2>Up to 70% off | Best sellers curated for your delight</h2>
+                        </div>
+                        <div class="content">
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/13.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Up to 60% off | Appliances</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/14.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Up to 40% off | Furniture</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/15.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Up to 50% off | Home decor</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/16.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p> Up to 70% off | Kitchen</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <a href="#">See all offers</a>
+                        </div>
+                    </div>
+
+                    <!-- box 2 -->
+
+                    <div class="main-box">
+                        <div class="heading">
+                            <h2>Up to 65% off | Bestselling appliances for your home</h2>
+                        </div>
+                        <div class="content">
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/17.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Refrigerators | Up to 60% off</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/18.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Washing machines | Up to 60% off</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/19.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>AC | Up to 55% off</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/20.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Microwaves | Up to 60% off</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <a href="#">See all offers</a>
+                        </div>
+                    </div>
+
+                    <!-- box 3 -->
+
+                    <div class="main-box">
+                        <div class="heading">
+                            <h2>Minimum 60% off | Deals on Amazon brands & more</h2>
+                        </div>
+                        <div class="content">
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/21.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Starting 129 | Home décor & lighting</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/22.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Minimum 50% off | Kitchen products</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="no1">
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/23.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Starting ₹99 | Toys & games</p>
+                                    </div>
+                                </div>
+                                <div class="first">
+                                    <div class="image">
+                                        <img src="images/main/24.jpg" alt="">
+                                    </div>
+                                    <div class="text">
+                                        <p>Minimum 60% off | Jackets & sweatshirts</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <a href="#">See all offers</a>
+                        </div>
+                    </div>
+
+                    <!-- box 4 -->
+
+                    <div class="main-box">
+                        <div class="heading">
+                            <h2>Up to 75% off | Electronics & accessories</h2>
+                        </div>
+                        <div class="content">
+                            <img src="images/main/25.jpg" alt="">
+                        </div>
+                        <div class="bottom">
+                            <a href="#">See all offers</a>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+            <!--================================= SECTION TWO OVER =================================-->
+
+
+
+            <!--================================= SECTION THREE START =================================-->
+
+            <section class="section3" id="section3">
+
+                <div class="sec2-container">
+                    <div class="heading">
+                        <h2>Blockbuster Deals</h2>
+                        <a href="#">See all deals</a>
+                    </div>
+
+                    <button id="left-slide-btn1" class="slide-btn2" onclick="slideleft()"><i
+                            class="fa-solid fa-angle-left"></i></button>
+                    <button id="right-slide-btn1" class="slide-btn1" onclick="sliderihgt()"><i
+                            class="fa-solid fa-angle-right"></i></button>
+                    <div class="content" id="content">
+                        <ul>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/1.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 39% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Samsung Galaxy M14 | Lowest Ever Price</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/2.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 89% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Starting at 999 -samrtwatches from...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/3.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to % off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Top Headsets form Oneplus, Samsung...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/4.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to % off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Starting from 7499 including addition...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/5.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to % off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Redmi 12 5G|Starting from 11999 incl...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/6.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to % off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Branded Suitcase Trolleys & Sets - Am...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/7.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to % off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>The Biggest Deal on the best selling M...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/8.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to % off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Home Appliances from Top Brands</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/9.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 53% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Budget Laptops Under INR 40000</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/10.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 48% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Sony headphones & Speakers: Upto Rs...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/11.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 53% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Household Supplies and Personal Care </p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/12.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 23% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>iQOO neo 7 pro || Most Powerful Smartphone</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/13.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 46% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Skin - Biotique, Cetaphil, Mamaearth</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/14.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 71% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Best Selling Men's Grooming Devices</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/15.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 60% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Best Styles in Footwear & Handbages </p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/16.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 51% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Alexa, Fire TV & Kindle | Upto 45% Off </p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/17.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 57% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Deals on Stethoscopes & Medical Sup... </p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section2/18.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>Up to 57% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Sports Dumbbells, Weight Accessories...</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--================================= SECTION THREE OVER =================================-->
+
+
+
+            <!--================================= SECTION FOUR START =================================-->
+
+            <section class="section4 section3" id="section4">
+
+                <div class="sec2-container">
+                    <div class="heading">
+                        <h2>Trending Deals</h2>
+                        <a href="#">See all deals</a>
+                    </div>
+
+                    <button id="left-slide-btn1" class="slide-btn2" onclick="slideleft2()"><i
+                            class="fa-solid fa-angle-left"></i></button>
+                    <button id="right-slide-btn1" class="slide-btn1" onclick="sliderihgt2()"><i
+                            class="fa-solid fa-angle-right"></i></button>
+                    <div class="content" id="content2">
+                        <ul>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/1.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>80% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Crazy Deals on BSB Bedsheets</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/2.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>₹199 and under</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Best of BSB Bedsheets</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/3.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>85% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹199.00 </span>
+                                    <p>M.R.P. <strike>₹1,299.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Pack Of 12 socks @199</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/4.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>56% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹549.00 </span>
+                                    <p>M.R.P. <strike>₹1,245.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Pigeon Amaze Plus Electric Kettle 1.5 L</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/5.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>38% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹299.00 </span>
+                                    <p>M.R.P. <strike>₹480.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Amazon Brand - Presto Oxo-Biodegra...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/6.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>68% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹109.00 </span>
+                                    <p>M.R.P. <strike>₹340.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Panasonic 9W LED Bulb LED Bulb 9 wa...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/7.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>51% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹489.00 </span>
+                                    <p>M.R.P. <strike>₹1000.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Amazon Brand - Presto Total Wash De...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/8.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>80% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹198.00 </span>
+                                    <p>M.R.P. <strike>₹1999.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Best of Status Bathmats</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/9.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>74% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹129.00 </span>
+                                    <p>M.R.P. <strike>₹500.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Philips 9-Watts Multipack B22 LED Co...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/10.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>60% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Allen Solly Men's Sweatshirt</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/11.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>₹249 and under</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text2">
+                                    <p>Best Offer on Pack of 2 Status Doormat</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/12.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>60% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹299.00 </span>
+                                    <p>M.R.P. <strike>₹740.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Amazon Brand - Presto Disinfectant T...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/13.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>57% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹350.00 </span>
+                                    <p>M.R.P. <strike>₹819.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Recron Certified Dream Fibre Pillow (4</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/14.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>79% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹149.00 </span>
+                                    <p>M.R.P. <strike>₹700.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Crompton Galaxy Decoration Copper...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/15.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>62% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹379.00 </span>
+                                    <p>M.R.P. <strike>₹999.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>ENDEAVOUR WEAR Men's Regular Fit...</p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/16.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>36% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹159.00 </span>
+                                    <p>M.R.P. <strike>₹249.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Halonix All Rounder Base B22D 15W,8... </p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/17.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>49% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹559.00 </span>
+                                    <p>M.R.P. <strike>₹1100.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Amazon Brand - Presto Matic Front Lo... </p>
+                                </div>
+                            </li>
+                            <li class="box">
+                                <div class="image">
+                                    <img src="images/section4/18.png" alt="">
+                                </div>
+                                <div class="text1">
+                                    <span>26% off</span>
+                                    <p>Republic Day Sale</p>
+                                </div>
+                                <div class="text3">
+                                    <span>₹309.00 </span>
+                                    <p>M.R.P. <strike>₹420.00</strike> </p>
+                                </div>
+                                <div class="text2">
+                                    <p>Amazon Brand - Presto! 2 Ply Kitchen...</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </section>
+
+            <!--================================= SECTION FOUR OVER =================================-->
+
+
+        </article>
+
+        <!--============================================== ARTICAL ONE OVER  ==============================================-->
+
+    </main>
+
+
+    <footer>
+
+        <div class="back-to-top">
+            <button id="to-top" class="to-top">Back to top</button>
+        </div>
+        <div class="part2">
+            <div class="column1">
+                <div class="heading">
+                    <h3>Get to Know Us</h3>
+                </div>
+                <ul>
+                    <li>About Us</li>
+                    <li>Careers</li>
+                    <li>Press Releases</li>
+                    <li>Amazon Science</li>
+                </ul>
+            </div>
+            <div class="column1">
+                <div class="heading">
+                    <h3>Connect with Us</h3>
+                </div>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                </ul>
+            </div>
+            <div class="column1">
+                <div class="heading">
+                    <h3>Make Money with Us</h3>
+                </div>
+                <ul>
+                    <li>Sell on Amazon</li>
+                    <li>Sell under Amazon Accelerator</li>
+                    <li>Pretect and Build Your Brand</li>
+                    <li>Amazon Global Selling</li>
+                    <li>Become an Affiliate</li>
+                    <li>Fulfilment by Amazon</li>
+                    <li>Advertise Your Products</li>
+                    <li>Amazon Pay on Merchants</li>
+                </ul>
+            </div>
+            <div class="column1">
+                <div class="heading">
+                    <h3>Let Us Help You</h3>
+                </div>
+                <ul>
+                    <li>COVID-19 and Amazon</li>
+                    <li>Your Account</li>
+                    <li>Returns Centre</li>
+                    <li>100% Purchase Protection</li>
+                    <li>Amazon App Download</li>
+                    <li>Help</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="part3">
+            <div class="first">
+                <div class="logo">
+                    <img src="images/Screenshot 2024-01-20 112019.png" alt="">
+                </div>
+                <!-- <div class="language-box">
+                    <p></p>
+                </div> -->
+                <button class="language-btn" onmouseover="showlanguage()" onmouseout="hidelanguage()">
+                    <i class="fa-solid fa-earth-asia"></i>English
+                </button>
+                <div class="language-box" id="language-box">
+                    <span class="language-airo"></span>
+
+                </div>
+            </div>
+            <div class="second">
+                <ul>
+                    <li>Australia</li>
+                    <li>Brazil</li>
+                    <li>Canada</li>
+                    <li>China</li>
+                    <li>France</li>
+                    <li>Germany</li>
+                    <li>Italy</li>
+                    <li>Japan</li>
+                    <li>Mexico</li>
+                    <li>Netherlands</li>
+                    <li>Poland</li>
+                    <li>Singapore</li>
+                    <li>Spain</li>
+                    <li>Turkey</li>
+                    <li>United Arab Emirates</li>
+                    <li>United Kingdom</li>
+                    <li>United States</li>
+                </ul>
+            </div>
+        </div>
+        <div class="part4">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <a href="">
+                                AbeBooks
+                                <br>
+                                <span>
+                                    Books, art
+                                    <br>
+                                    & collectibles
+                                </span>
+                            </a>
+                        </td>
+                        <td style="width: 4%;"></td>
+                        <td>
+                            <a href="">
+                                Amazon Web Services
+                                <br>
+                                <span>
+                                    Scalable Cloud
+                                    <br>
+                                    Computing Services
+                                </span>
+                            </a>
+                        </td>
+                        <td style="width: 4%;"></td>
+                        <td>
+                            <a href="">
+                                Audible
+                                <br>
+                                <span>
+                                    Download
+                                    <br>
+                                    Audio Books
+                                </span>
+                            </a>
+                        </td>
+                        <td style="width: 4%;"></td>
+                        <td>
+                            <a href="">
+                                IMDb
+                                <br>
+                                <span>
+                                    Movies, TV
+                                    <br>
+                                    & Celebrities
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="">
+                                Shopbop
+                                <br>
+                                <span>
+                                    Designer
+                                    <br>
+                                    Fashion Brands
+                                </span>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="">
+                                Amazon Business
+                                <br>
+                                <span>
+                                    Everything For
+                                    <br>
+                                    Your Business
+                                </span>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="">
+                                Prime Now
+                                <br>
+                                <span>
+                                    2-Hour Delivery
+                                    <br>
+                                    on Everyday Items
+                                </span>
+                            </a>
+                        </td>
+                        <td></td>
+                        <td>
+                            <a href="">
+                                Amazon Prime Music
+                                <br>
+                                <span>
+                                    100 million songs, ad-free
+                                    <br>
+                                    Over 15 million podcast episodes
+                                </span>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/nav-bar.js"></script>
+
+</body>
+
+</html>

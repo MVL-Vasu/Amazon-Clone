@@ -1,0 +1,915 @@
+
+/* FOR SCROLL SPAN  */
+
+/* html{
+    scroll-snap-type: y mandatory;
+}
+section{
+    scroll-snap-align: start;
+} */
+
+#section3{
+    scroll-margin-top: 75px;
+}
+ 
+.sticky{
+    position: sticky;
+    top: 0px;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    text-overflow: ellipsis;
+    font-family: 'Amazon Ember', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    /* display: none; */
+    background-color: rgb(163, 163, 163);
+    width: 10px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(0, 0, 0);
+    border-radius: 15px;
+    border: 3px solid rgb(163, 163, 163);
+}
+
+main::-webkit-scrollbar {
+    display: none;
+}
+
+header::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --hover-border: 1px solid #fff;
+    --srch-hover: 3px solid #ff953ec3;
+    --normal-border: 1px solid #000;
+}
+
+body {
+    min-height: 100vh;
+    overflow: scroll;
+    background: rgba(232, 232, 232, 0.996);
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 111;
+    transition: all .3s ease-in-out;
+}
+
+/*====================================== HEADER CSS START ======================================*/
+
+header {
+    /* position: sticky;
+    top: 0px; */
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: .3rem;
+    z-index: 11;
+    overflow: scroll;
+    background-color: #1c1919f8;
+    padding: .3rem .4rem;
+}
+
+/*============LOGO CSS ============*/
+
+header .logo {
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 100px;
+    max-width: 100px;
+    overflow: hidden;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+header .logo img {
+    height: 100%;
+    width: 100%;
+    transform: scale(2.3);
+    border: 1px solid #fff;
+}
+
+/*============ LOGO CSS  ============*/
+
+header .logo:hover {
+    outline: var(--hover-border);
+}
+
+/*============ ADDRESS CSS ============*/
+
+header .address {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 50px;
+    align-items: center;
+    font-size: 12px;
+    padding: 0rem .3rem;
+}
+
+header .address:hover {
+    outline: var(--hover-border);
+}
+
+header .address .address-icon {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+header .address .add-content :nth-child(1) {
+    color: #ccc;
+    font-weight: 400;
+}
+
+header .address .add-content :nth-child(2) {
+    color: #ffffff;
+    font-weight: 700;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-weight: 700; */
+    font-size: 14px;
+}
+
+/*============ SEARCH CSS ============*/
+
+.search-bar-container {
+    display: flex;
+    gap: .2rem;
+    height: 40px;
+    width: 634px;
+    background: #fff;
+    border-radius: 4px;
+    z-index: 1111;
+}
+
+/* select css */
+
+.search-bar-container #select {
+    border-radius: 4px 0 0 4px;
+    width: 55px;
+    padding: 0 .5rem;
+    text-align: center;
+    color: #0F1111;
+    border: none;
+    outline: none;
+    background-color: #eeeeee;
+}
+
+.search-bar-container #select:hover {
+    background-color: #ddd;
+}
+
+.search-bar-container #select:focus {
+    outline: var(--srch-hover);
+}
+
+.search-bar-container #select p {
+    color: #535353;
+    font-size: 12px;
+}
+
+.search-bar-container #select ion-icon {
+    font-size: 9px;
+    margin-left: .3rem;
+    color: #535353;
+}
+
+/* search bar css */
+
+.search-bar-container input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: .2rem .5rem;
+    font-size: 15px;
+    /* text-indent: 8px; */
+}
+
+.active {
+    outline: var(--srch-hover);
+}
+
+/* search icon css */
+
+.search-bar-container .search-icon {
+    width: 50px;
+    padding: .2rem;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #000000;
+    border-radius: 0 4px 4px 0;
+    background: rgb(255, 197, 81);
+}
+
+.search-bar-container .search-icon:hover {
+    background: rgb(241, 178, 51);
+}
+
+.search-bar-container .search-icon:focus {
+    outline: var(--srch-hover);
+}
+
+/*============ flage css ============*/
+
+header .flage {
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem .3rem;
+}
+
+header .flage:hover {
+    outline: var(--hover-border);
+}
+
+header .flage img {
+    height: 20px;
+    width: 20px;
+    margin-right: .2rem;
+    /* padding: 0 .2rem ; */
+}
+
+.flage select {
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+/*============= LOGIN CSS  =============*/
+
+
+header .login-bar {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    /* text-align: left; */
+    padding: 0rem .3rem;
+}
+
+header .login-bar:hover {
+    outline: var(--hover-border);
+}
+
+header .login-bar .add-content :nth-child(1) {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+header .login-bar .add-content :nth-child(2) {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    /* font-weight: 600; */
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+
+/* RETURN AND ORDERS CSS */
+
+header .return-bar {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem .3rem;
+}
+
+header .return-bar:hover {
+    outline: var(--hover-border);
+}
+
+header .return-bar .add-content p {
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+header .return-bar .add-content span {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+/*========== CART BAR CSS ==========*/
+
+header .cart-bar {
+    height: 50px;
+    padding: .5rem;
+    color: #fff;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .cart-bar:hover {
+    outline: var(--hover-border);
+}
+header .cart-bar .span{
+    position: absolute;
+    color: #ff953ec3;
+    font-weight: 900;
+    top: 10px;
+    right: 58px;
+}
+
+header .cart-bar span {
+    background-position: -10px -340px;
+    width: 38px;
+    height: 26px;
+    background-image: url("https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-2x-reorg-privacy._CB600086755_.png");
+    background-size: 350px;
+    /* font-size: 2.5rem; */
+}
+
+header .cart-bar p {
+    font-size: .8rem;
+    transform: translateY(9px);
+    /* font-weight: 600; */
+}
+
+/*====================================== HEADER CSS OVER ======================================*/
+
+
+/*====================================== MAIN CSS START ======================================*/
+
+main {
+    height: inherit;
+    overflow: hidden;
+}
+
+main .manage{
+    height: 300px;
+}
+
+main .img {
+    width: 100%;
+    height: 550px;
+    top: 105px;
+    position: absolute;
+    background: linear-gradient(to bottom, transparent, rgba(232, 232, 232, 0.996)), url(images/JanART24_NTA_PC_HERO_2_2X._CB584284438_.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    background-repeat: no-repeat;
+}
+
+
+#artical1 {
+    /* transform: translateY(300px); */
+    height: inherit;
+    opacity: 5;
+    z-index: 11;
+    padding: 1rem 1.3rem;
+    /* position: absolute; */
+    width: 100%;
+    /* border: 1px solid #000; */
+}
+
+/*==================================== SECTION 1 CSS START  ====================================*/
+
+.section1 {
+    margin-bottom: 1.5rem;
+}
+
+.section1 .container {
+    display: flex;
+    gap: 1.4rem;
+}
+
+/*====================== BOX CSS START  ======================*/
+
+
+.section1 .container .main-box {
+    flex: 1 1 10rem;
+    height: 420px;
+    padding: 1.2rem;
+    background: #fff;
+}
+
+.section1 .container .main-box .heading {
+    /* font-size: 21px !important; */
+    height: 15%;
+    margin-bottom: .5rem;
+}
+
+.section1 .container .main-box .heading h2 {
+    font-size: 20px !important;
+}
+
+/*=============== content css start ===============*/
+
+.section1 .container .main-box .content {
+    /* border: var(--srch-hover); */
+    width: 100%;
+    height: 75%;
+}
+
+.section1 .container .main-box .content .no1 {
+    display: flex;
+    gap: .8rem;
+    height: 49%;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+.section1 .container .main-box .content .no1 .first {
+    height: 100%;
+    width: 50%;
+    cursor: pointer;
+}
+
+.section1 .container .main-box .content .no1 .first .image {
+    height: 73%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.section1 .container .main-box .content .no1 .first .image img {
+    height: 100%;
+    width: 100%;
+    transform: scaleX(1.3);
+}
+
+.section1 .container .main-box .content .no1 .first .text p {
+    font-size: 12px;
+    color: #000;
+}
+
+/*=============== content css over ===============*/
+
+/*=============== bottom css start ===============*/
+
+.section1 .container .main-box .bottom {
+    height: 10%;
+    padding: .5rem 0;
+    font-size: 12px;
+}
+
+.section1 .container .main-box .bottom a {
+    color: rgb(10, 83, 151);
+    text-decoration: none;
+}
+
+.section1 .container .main-box .bottom a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+/*=============== bottom css over ===============*/
+
+/*====================== BOX CSS OVER  ======================*/
+
+
+/*====================== ADD BOX CSS START =====================*/
+
+.section1 .container .add-box {
+    flex: 1 1 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 420px;
+    /* padding: 1rem; */
+    /* background: #ffffff; */
+}
+
+.section1 .container .add-box .text-content {
+    height: 37%;
+    width: 100%;
+    padding: 1.3rem;
+    background: #ffffff;
+}
+
+.section1 .container .add-box .heading {
+    font-size: 1.1rem;
+    margin-bottom: .5rem;
+    height: 60%;
+}
+
+.section1 .container .add-box .heading h2 {
+    font-size: 21px !important;
+}
+
+.section1 .container .add-box .text-content button {
+    display: block;
+    width: 100%;
+    height: 30%;
+    border: 2px solid #FFD814;
+    outline: none;
+    border-radius: 8px;
+    background: #FFD814;
+}
+
+.section1 .container .add-box .text-content button:hover {
+    background: #ecc712;
+}
+
+.section1 .container .add-box .add-image {
+    height: 63%;
+    width: 100%;
+    padding: 0rem .7rem;
+
+}
+
+.section1 .container .add-box .add-image img {
+    height: 100%;
+    width: 100%;
+}
+
+
+/*====================== ADD BOX CSS OVER =====================*/
+
+/*========SECTION 2 OTHER BOX CSS START  =======*/
+
+.section1 .container .main-box .content {
+    /* border: var(--srch-hover); */
+    width: 100%;
+    height: 75%;
+}
+
+.section1 .container .main-box .content img {
+    height: 100%;
+    width: 100%;
+}
+
+/*=======SECTION 2 OTHER BOX CSS OVER  ==========*/
+
+
+/*==================================== SECTION 1 CSS OVER  ====================================*/
+
+
+/*==================================== SECTION 2 CSS START  ====================================*/
+
+
+
+.section3 { 
+    /* border: 1px solid #000; */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    padding-bottom: .5rem;
+}
+.section3 .sec2-container{
+    width: 100%;
+    overflow: hidden;
+}
+.section3 .heading {
+    line-height: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.section3 .heading a {
+    color: rgb(10, 83, 151);
+    font-size: .9rem;
+    text-decoration: none;
+}
+
+.section3 .heading a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+.section3 .heading h2 {
+    font-size: 21px;
+}
+
+.section3 .content {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 1rem 0;
+    /* transition: scroll-left 1s ease-in-out; */
+}
+
+.section3 .content ul {
+    display: flex;
+    gap: .6rem;
+    list-style: none;
+}
+
+.section3 .content .box {
+    width: 240px;
+    /* height: 260px; */
+    height: 260px;
+    cursor: pointer;
+    /* background: rgba(0, 0, 0, 0.1); */
+    /* border: var(--normal-border); */
+}
+
+.section3 .content .box .image {
+    height: 80%;
+    width: 100%;
+    /* padding: .5rem 1rem; */
+
+}
+
+.section3 .content .box .image img {
+    /* border: 1px solid black; */
+    object-position: center;
+    /* object-fit: cover; */
+    height: 100%;
+    width: 100%;
+}
+
+.section3 .content .box .text1 {
+    height: 10%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-size: .7rem;
+    /* border: 1px solid black; */
+}
+
+.section3 .content .box .text1 span {
+    background: #CC0C39;
+    font-size: .8rem;
+    padding: .3rem .4rem;
+    color: #ffffff;
+    text-shadow: none;
+    /* font-weight: 500; */
+    border-radius: .2rem;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.section3 .content .box .text1 p {
+    color: #CC0C39;
+    /* font-weight: 600; */
+    padding-left: .5rem;
+}
+
+.section3 .content .box .text2 {
+    padding: .3rem 0;
+    height: 10%;
+    font-size: 12px;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    color: #000;
+}
+
+/*---------------- section 4 css start ----------------*/
+
+#section4 .box{
+    height: 280px;
+}
+#section4 .box .image{
+    height: 75%;
+}
+
+#section4 .content .box .text3{
+    display: flex;
+    align-items: last baseline;
+    gap: .5rem;
+}
+#section4 .content .box .text3 span{
+    font-size: 1rem;
+}
+#section4 .content .box .text3 p{
+    color: #000000bd;
+    font-size: .7rem;
+}
+
+/*---------------- section 4 css over ----------------*/
+
+
+/*-------------------- SECTION 2 SLIDE BUTTON CSS START --------------------*/
+
+
+.slide-btn1,.slide-btn2{
+    color: #00000094;
+    height: 100px;
+    width: 45px;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    z-index: 1;
+    font-size: 2rem;
+    position: absolute;
+    cursor: pointer;
+    transform: translateY(70px);
+}
+
+.slide-btn1{
+   right: 2.2rem;
+   box-shadow: -2px 1px 3px #a5a5a5;
+   /* display: none; */
+   /* top: 10rem; */
+}
+.slide-btn2{
+    /* display: none; */
+    box-shadow: 2px 1px 3px #888;
+}
+
+
+
+/*-------------------- SECTION 2 SLIDE BUTTON CSS OVER --------------------*/
+
+
+
+
+
+/*==================================== SECTION 2 CSS START  ====================================*/
+
+
+
+
+/*====================================== MAIN CSS OVER ======================================*/
+
+
+/*====================================== FOOTER CSS START ======================================*/
+
+
+
+footer{
+    border: 1px solid #000;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #232F3E;
+    height: 800px;
+}
+footer .back-to-top{
+    display: block;
+    width: 100%;
+}
+footer .back-to-top button{
+    width: 100%;
+    height: 50px;
+    background: #37475A;
+    color: #fff;
+    border: none;
+    outline: none;
+    margin-bottom: 3rem;
+}
+footer .back-to-top button:hover{
+    background: #455162;
+}
+
+footer .part2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 7.2rem;
+    color: #fff;
+}
+footer .part2 .column1 .heading h3{
+    font-size: 16px !important;
+    margin-bottom: .5rem;
+}
+footer .part2 .column1 ul{
+    list-style: none;   
+    line-height: 1.7rem;
+    margin-bottom: 3rem;
+}
+footer .part2 .column1 ul li{
+    font-size: 14px;
+    color: #ddd;
+}
+footer li:hover{
+    text-decoration: underline;
+}
+footer hr{
+    border: 1px solid #3c444d;
+    margin-bottom: 2rem;
+}
+
+footer .part3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* gap: 7.2rem; */
+    color: #fff;
+    flex-direction: column;
+}
+
+footer .part3 .first{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 4rem;
+    justify-content: center;
+}
+
+footer .part3 .logo {
+    height: 55px;
+    width: 140px;
+    overflow: hidden;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+footer .part3 .logo img {
+    height: 100%;
+    width: 100%;
+}
+footer .part3 .language-btn{
+    height: 40px;
+    width: 130px;
+    border: 1px solid #dddddd66;
+    background: transparent;
+    color: #fff;
+    border-radius: 3px;
+    outline: none;
+}
+footer .part3 .language-btn i{
+    margin-right: .5rem;
+}
+
+footer .part3 .first .language-box{
+    height: 300px;
+    width: 200px;
+    display: none;
+    position: absolute;
+    transform: translate(290px,110px);
+    transition: all 1s ease-in-out;
+    background: #fff;
+}
+footer .part3 .first .language-airo{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    transform: translateX(50px);
+    transform: rotate(45deg);
+    transform: translate(-7px,20px) rotate(45deg);
+    background-color: #fff;
+}
+
+footer .part3 .second ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 1rem auto;
+    gap: 1.2rem;
+    list-style: none;
+}
+footer ul li{
+    color: #ddd;
+    font-size: 12px;
+}
+
+footer .part4{
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 2rem 0;
+    border: 1px solid black;
+    background: #0F1111;
+}
+footer table{
+    border: 1px solid black;
+    max-width: 1000px;
+    width: 100%;
+    font-size: 12px !important;
+}
+footer table td{
+    color: #ddd;
+}
+footer table tbody tr td a{
+    color: #ddd;
+    text-decoration: none;
+    text-wrap: wrap;
+    /* white-space-collapse: ; */
+}
+footer table tbody a span{
+    color: #999;
+}
+
+/*====================================== FOOTER CSS OVER ======================================*/
